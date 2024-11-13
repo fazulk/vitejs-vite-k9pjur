@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Name of the branch to protect
+protected_branch='main'
+
+# Check if we are pushing to the protected branch
+while read local_ref local_sha remote_ref remote_sha
+do
+#   if [ "refs/heads/$protected_branch" = "$remote_ref" ]; then
+#     # Check for a tag in the push
+#     if [ "$(git tag --contains $local_sha)" = "" ]; then
+#       echo "ERROR: Pushes to $protected_branch must include a tag."
+#       exit 1
+#     fi
+
+# 	 # Check if the commit message starts with "chore: release"
+#     commit_message=$(git log -1 --format=%s $local_sha)
+#     if [[ ! $commit_message =~ ^chore:\ release ]]; then
+#       echo "ERROR: Commit message for pushes to $protected_branch must start with 'chore: release'."
+#       exit 1
+#     fi
+#   fi
+done
+
+exit 0
+
+

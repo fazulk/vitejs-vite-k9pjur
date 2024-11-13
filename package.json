@@ -6,9 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky",
+    "type-check": "node blah.js",
+    "release": "bash ./release.sh"
   },
   "devDependencies": {
+    "husky": "^9.1.6",
     "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "bumpp": "^9.8.1"
   }
 }
